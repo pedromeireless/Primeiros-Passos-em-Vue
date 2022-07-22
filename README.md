@@ -1,1 +1,1 @@
-<h1>PRIMEIRO CÓDIGO EM VUE.JS</h1>
+<h1 align='center'>PRIMEIRO CÓDIGO EM VUE.JS</h1>
