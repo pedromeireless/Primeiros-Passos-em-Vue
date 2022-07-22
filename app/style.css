@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    min-width: 1000px;
+    min-height: 500px;
+    background-color: rgb(247, 175, 175);
+    padding: 20px;
+    border-radius: 5px;
+}
+.add-tarefas{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.container h1 {
+    text-align: center;
+}
+.container input {
+    width: 80%;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+.container input:focus {
+    background-color: aliceblue;
+}
+.btn-add {
+    background-color: white;
+    transition: all 1s;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 5px;
+    width: 15%;
+}
+.btn-add:hover {
+    background-color: rgb(148, 143, 143);
+}
+#lista {
+    padding: 0px;
+}
+#conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}

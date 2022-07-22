@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quase CRUD em VUE</title>
+    <script src="/vue.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="app" class="container">
+		<h1>ADICIONE UMA TAREFA</h1>
+        <div class="add-tarefas">
+            <input type="text" v-model="myInput" @keyup.enter="setInput">
+		    <button @click="setInput" class="btn-add">Adicionar</button>
+        </div>
+		
+		<ul id="lista">
+            <li id="conteudo" v-for="(tarefa, i) in myTasks">{{ tarefa }} 
+                <button id="btn" @click="removeTask(i)">X</button>
+            </li>
+        </ul>
+	</div>
+
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				myInput: '',
+                myTasks: [],
+				length: 0,
+                update: false
+			},
+			methods: {
+				setInput() {
+                    if(this.myInput == ''){
+                        alert('Não pode adicionar uma tarefa em branco')
+                        return;
+                    }
+					this.myTasks.push(this.myInput)
+                    this.myInput = ''
+				},
+                removeTask(pos){
+                    this.myTasks.splice(pos, 1)
+                },
+                updateTask(){
+                    this.update = true
+                    console.log('aparece div')
+                }
+			}
+		})
+	</script>
+    
+</body>
+</html>
